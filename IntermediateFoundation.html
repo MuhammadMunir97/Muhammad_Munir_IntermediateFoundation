@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intermediate Foundation</title>
+</head>
+<body>
+    <script type = "text/javascript">
+    // PART ONE
+
+    // #1) NUMBER ONE
+
+    function sigma(num){
+        var sum =0;
+        for (var i= 0; i< num+1;i++){
+            sum += i;  
+        }
+        return sum;
+    }
+    // console.log(sigma(8));
+
+
+    // #2) NUMBER TWO
+   
+    function factorial(num){
+        var fact = 1;
+        for (var i= 1; i< num+1;i++){
+            fact *= i;  
+        }
+        return fact;
+    }
+    // console.log(factorial(40));
+
+
+   
+    // #3) NUMBER THREE
+
+    function fibonacci(num){
+        var fib = 0;
+        var fib1 = 0;
+        var fib2 = 1;
+        if (num === 0){
+            return fib1;
+        }
+        if (num == 1){
+        return fib2;
+        }
+        // the first two index are given so the loop is starting at 2
+        for (var i= 2; i< num+1;i++){
+            fib = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = fib;
+        }
+        return fib;
+    }
+    // console.log(fibonacci(6));
+
+
+
+    // #4) NUMBER FOUR
+
+    function secLast(arr){
+        if((arr.length == 1) || (arr.length === 0)){
+        return null;
+        }
+        return arr[arr.length -2];
+    }
+    // console.log(secLast([1,2,3]));
+
+
+    // #5) NUMBER FIVE
+
+    function nthLast(arr, n){
+        if(((arr.length - n) <= -1) || (n <= 0)){
+            return null;
+        }
+        return arr[arr.length - n];
+    }
+    // console.log(nthLast([1,2,3],-5));
+
+
+    // #6) NUMBER SIX
+
+    function secondLargest(arr, n){
+        if(arr.length <= 1){
+            return null;
+        }
+        var secLarg = 0;
+        var largest = arr[0];
+        for (var i = 0; i < arr.length; i++){
+            if (arr[i]>largest){
+            secLarg = largest;
+            largest = arr[i];   
+        }    
+        }
+        return secLarg;
+    }
+    // console.log(secondLargest([1,2,3,4,3,7,8,9,]));
+
+
+    // #7) NUMBER SEVEN
+
+    function doubleTrouble(arr){
+        arr.length = (arr.length * 2);
+        for (var i = ((arr.length/2)-1); i >= 0  ; i--){
+            arr[(i * 2)+1]= arr[i];
+            arr[(i*2)] = arr[i];
+        }
+        return arr;
+    }
+    // console.log(doubleTrouble([1,2,3,4,5,6,"pop"]));
+
+
+    // PART 2 
+    // STEP 1
+
+    function fibonacci(num) {
+        if (num <= 1)
+        {
+            return 1;
+        }
+        return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+    // console.log(fibonacci(4));
+
+    // STEP 2
+    // In a different file in the same repository
+
+    </script>
+</body>
+</html>
